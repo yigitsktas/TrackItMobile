@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrackIt.FitnessHomePage"
+             Title="FitnessHomePage"
+			 BackgroundColor="White"
+			 >
+
+	<VerticalStackLayout>
+		<StackLayout Padding="0,0,0,0" HeightRequest="100">
+			<Label
+					Padding="0,0,0,0"
+					Text="TRACK IT."
+					SemanticProperties.HeadingLevel="Level1"
+					FontSize="32"
+					FontFamily="Arimo"
+					TextColor="Black"
+					FontAttributes="Bold" 
+					HorizontalOptions="Center" />
+			<Label
+					Padding="0,0,10,0"
+					Text="FITNESS."
+					SemanticProperties.HeadingLevel="Level1"
+					FontSize="32"
+					FontFamily="Arimo"
+					TextColor="Black"
+					FontAttributes="Bold" 
+					HorizontalOptions="Center" />
+		</StackLayout>
+
+		<StackLayout Padding="0,200,0,0" HeightRequest="100" Spacing="40">
+			<Grid RowDefinitions="100, Auto, *" ColumnDefinitions="*, *">
+				<ImageButton  x:Name="MyWorkoutBtn"
+						Source="myworkouts.png"
+						Grid.Row="0"
+						Grid.Column="0"
+						SemanticProperties.Hint="Login"
+						BackgroundColor="White"
+						BorderColor="Black"
+						WidthRequest="180"
+						HeightRequest="180"
+						Aspect="Fill"
+						Clicked="MyWorkoutBtn_Clicked"
+						HorizontalOptions="Center"/>
+
+				<ImageButton x:Name="ExercisesBtn"
+						Source="exercises.png"
+						Grid.Row="0"
+						Grid.Column="1"
+						SemanticProperties.Hint="Register"
+						BackgroundColor="Black"
+						WidthRequest="180"
+						HeightRequest="180"
+						Aspect="Fill"
+						Clicked="ExercisesBtn_Clicked"
+						HorizontalOptions="Center" />
+			</Grid>
+		</StackLayout>
+
+		<StackLayout Padding="0,200,0,0" HeightRequest="100" Spacing="40">
+			<Grid RowDefinitions="100, Auto, *" ColumnDefinitions="*, *">
+				<ImageButton x:Name="MyProgressBtn"
+						Source="myprogress.png"
+						Grid.Row="1"
+						Grid.Column="0"
+						SemanticProperties.Hint="Login"
+						BackgroundColor="Black"
+						WidthRequest="180"
+						HeightRequest="180"
+						Aspect="Fill"
+						Clicked="MyProgressBtn_Clicked"
+						HorizontalOptions="Center"/>
+
+				<ImageButton x:Name="WeeklyBtn"
+						Source="weekly.png"
+						Grid.Row="1"
+						Grid.Column="1"
+						SemanticProperties.Hint="Register"
+						BackgroundColor="Black"
+						WidthRequest="180"
+						HeightRequest="180"
+						Aspect="Fill"
+						Clicked="WeeklyBtn_Clicked"
+						HorizontalOptions="Center" />
+			</Grid>
+		</StackLayout>
+
+
+		<StackLayout Padding="0,480,0,0" >
+			<Grid RowDefinitions="200, Auto, *" ColumnDefinitions="*, *">
+				<Button x:Name="health"
+						Grid.Row="0"
+						Grid.Column="0"
+						Text="h."
+						SemanticProperties.Hint="Login"
+						BackgroundColor="Grey"
+						TextColor="White"
+						FontSize="15"
+						FontAttributes="Bold"
+						FontFamily="Arimo"
+						WidthRequest="50"
+						HeightRequest="20"
+						CornerRadius="0"
+						HorizontalOptions="Start"/>
+
+				<Button x:Name="profile"
+						Grid.Row="0"
+						Grid.Column="1"
+						Text="p."
+						SemanticProperties.Hint="Login"
+						BackgroundColor="Grey"
+						TextColor="White"
+						FontSize="15"
+						FontAttributes="Bold"
+						FontFamily="Arimo"
+						WidthRequest="60"
+						HeightRequest="20"
+						CornerRadius="40"
+						Margin="0, 0, 260, 0"
+						HorizontalOptions="Center"/>
+
+				<Button x:Name="fitness"
+						Text="f."
+						Grid.Row="0"
+						Grid.Column="2"
+						SemanticProperties.Hint="Register"
+						BackgroundColor="Grey"
+						TextColor="White"
+						FontSize="15"
+						FontFamily="Arimo"
+						FontAttributes="Bold"
+						WidthRequest="50"
+						HeightRequest="20"
+						CornerRadius="0"
+						HorizontalOptions="End"/>
+			</Grid>
+		</StackLayout>
+
+		<StackLayout Padding="0,480,0,0">
+			<Label
+					Text="all rights reserved®"
+					SemanticProperties.HeadingLevel="Level1"
+					FontSize="12"
+					FontFamily="Arimo"
+					TextColor="Black"
+					FontAttributes="Bold"
+					HorizontalOptions="Center" />
+		</StackLayout>
+	</VerticalStackLayout>
+</ContentPage>

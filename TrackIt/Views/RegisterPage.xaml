@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrackIt.RegisterPage"
+             Title="RegisterPage"
+			  BackgroundColor="White">
+
+	<VerticalStackLayout>
+		<StackLayout Padding="0,50,0,0" HeightRequest="100">
+			<Label
+					Padding="0,0,0,0"
+					Text="TRACK IT."
+					SemanticProperties.HeadingLevel="Level1"
+					FontSize="32"
+					FontFamily="Arimo"
+					TextColor="Black"
+					FontAttributes="Bold" 
+					HorizontalOptions="Center" />
+		</StackLayout>
+
+		<StackLayout Padding="0,80,0,0" HeightRequest="100">
+			<Label
+					Padding="0,0,0,0"
+					Text="register."
+					SemanticProperties.HeadingLevel="Level1"
+					FontSize="46"
+					FontFamily="Arimo"
+					TextColor="Black"
+					FontAttributes="Bold" 
+					HorizontalOptions="Center" />
+		</StackLayout>
+
+
+		<StackLayout Padding="0,100,0,0" HeightRequest="100" Spacing="20">
+			<Entry x:Name="email"
+				   WidthRequest="400"
+				   FontFamily="Arimo"
+				   TextColor="White"
+				   BackgroundColor="LightGrey"
+				   PlaceholderColor="Black"
+				   Placeholder="email"/>
+
+			<Entry x:Name="nickname"
+				   WidthRequest="400"
+				   FontFamily="Arimo"
+				   TextColor="White"
+				   BackgroundColor="LightGrey"
+				   PlaceholderColor="Black"
+				   Placeholder="nickname"/>
+
+			<Entry x:Name="password"
+				   WidthRequest="400"
+				   FontFamily="Arimo"
+				   TextColor="White"
+				   BackgroundColor="LightGrey"
+				   IsPassword="True"
+				   PlaceholderColor="Black"
+				   Placeholder="password"/>
+		</StackLayout>
+
+
+		<StackLayout Padding="0,270,0,0" Spacing="40">
+			<Button x:Name="LoginBtn"
+					Grid.Row="0"
+					Grid.Column="0"
+					Text="register."
+					SemanticProperties.Hint="Login"
+					BackgroundColor="Black"
+					TextColor="White"
+					FontSize="15"
+					FontAttributes="Bold"
+					FontFamily="Arimo"
+					WidthRequest="140"
+					HeightRequest="20"
+					CornerRadius="0"
+					Clicked="RegisterBtn_Clicked"
+					HorizontalOptions="Center"/>
+
+			<Label
+					Padding="0,0,0,0"
+					Text="do you have an account?"
+					TextDecorations="Underline"
+					SemanticProperties.HeadingLevel="Level1"
+					FontSize="16"
+					FontFamily="Arimo"
+					TextColor="Black"
+					FontAttributes="Bold" 
+					HorizontalOptions="Center" />
+		</StackLayout>
+
+		<StackLayout Padding="0,260,0,0">
+			<Label
+					Text="all rights reserved®"
+					SemanticProperties.HeadingLevel="Level1"
+					FontSize="12"
+					FontFamily="Arimo"
+					TextColor="Black"
+					FontAttributes="Bold"
+					HorizontalOptions="Center" />
+		</StackLayout>
+	</VerticalStackLayout>
+</ContentPage>

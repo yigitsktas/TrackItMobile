@@ -13,7 +13,7 @@ namespace TrackIt.Model
         public int MemberID { get; set; }
         public string Summary { get; set; }
         public string Directions { get; set; }
-        public int Serve { get; set; }
+        public int? Serve { get; set; }
         public int PrepTime { get; set; }
         public int CookTime { get; set; }
         public string Ingredients { get; set; }

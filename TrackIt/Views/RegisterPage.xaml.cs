@@ -24,7 +24,7 @@ public partial class RegisterPage : ContentPage
 
 			if (result == true)
 			{
-                await Shell.Current.GoToAsync(nameof(FitnessHomePage));
+                await Shell.Current.GoToAsync(nameof(HomePage));
 			}
             else
 			{

@@ -10,8 +10,8 @@ namespace TrackIt.Model
     public class Nutrient
     {
         public int NutrientID { get; set; }
-        public string NutrientName { get; set; }
-        public string Brand { get; set; }
+        public string? NutrientName { get; set; }
+        public string? Brand { get; set; }
         public int NutrientType { get; set; }
         public int Calorie { get; set; }
         public double TotalFat { get; set; }

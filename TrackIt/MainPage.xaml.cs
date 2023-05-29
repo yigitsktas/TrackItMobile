@@ -19,7 +19,7 @@ public partial class MainPage : ContentPage
 
 	private void Fitness_Clicked(object sender, EventArgs e)
 	{
-		Navigation.PushAsync(new FitnessHomePage());
+		Navigation.PushAsync(new HomePage());
 	}
 }
 

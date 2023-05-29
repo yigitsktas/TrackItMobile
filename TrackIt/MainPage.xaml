@@ -76,22 +76,6 @@
 						HorizontalOptions="Center"
 						Clicked="LoginBtn_Clicked"/>
 
-					<!--<Button x:Name="Fitness"
-						Grid.Row="0"
-						Grid.Column="0"
-						Text="fitness."
-						SemanticProperties.Hint="Login"
-						BackgroundColor="Black"
-						TextColor="White"
-						FontSize="15"
-						FontAttributes="Bold"
-						FontFamily="Arimo"
-						WidthRequest="180"
-						HeightRequest="20"
-						CornerRadius="0"
-						HorizontalOptions="Center"
-						Clicked="Fitness_Clicked"/>-->
-
 					<Button x:Name="RegisterBtn"
 						Text="register."
 						Grid.Row="0"

@@ -1,4 +1,5 @@
 using TrackIt.Helpers;
+using TrackIt.Interfaces;
 using TrackIt.Model;
 using TrackIt.Services;
 using TrackIt.ViewModels;
@@ -7,19 +8,22 @@ namespace TrackIt;
 
 public partial class ProfilePage : ContentPage
 {
-    public ProfileViewModel _viewModel;
-
-	public ProfilePage(ProfileViewModel vm)
+	public ProfilePage()
 	{
 		InitializeComponent();
-        _viewModel = vm;
-    }
+		
+		var member = MemberService.GetMember();
 
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-        {
-            _viewModel.GetProfileCommand.Execute(null);
-        }
-    }
+		if (member != null)
+		{
+			UserName.Text = member.Username;
+			EMail.Text = member.EMail;
+			email.Text = member.EMail;
+		}
+		else
+		{
+			UserName.Text = "";
+			EMail.Text = "";
+		}
+	}
 }

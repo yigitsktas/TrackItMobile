@@ -29,7 +29,7 @@ public partial class LoginPage : ContentPage
 		
 		if (isValid == true) 
 		{
-            await Shell.Current.GoToAsync(nameof(FitnessHomePage));
+            await Shell.Current.GoToAsync(nameof(HomePage));
         }
         else
 		{

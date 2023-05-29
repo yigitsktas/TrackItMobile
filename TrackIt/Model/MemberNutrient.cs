@@ -12,8 +12,9 @@ namespace TrackIt.Model
         public int MemberNutrientID { get; set; }
         public int MemberID { get; set; }
         public int NutrientID { get; set; }
-        public string Notes { get; set; }
+        public string? Notes { get; set; }
         public double ServingSize { get; set; }
         public int ServingType { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

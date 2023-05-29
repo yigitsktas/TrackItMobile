@@ -4,7 +4,6 @@
              x:Class="TrackIt.ProfilePage"
              Title="ProfilePage"
 			 xmlns:viewmodel="clr-namespace:TrackIt.ViewModels"
-			 x:DataType="viewmodel:ProfileViewModel"
 			 Background="White">
 
 	<VerticalStackLayout>
@@ -22,17 +21,25 @@
 
 		<StackLayout Padding="0,80,0,0">
 			<Label
+					x:Name="UserName"	
 					TextColor="Black"
-					Text="{Binding Member.Username}"
 					SemanticProperties.HeadingLevel="Level1"
 					FontSize="48"
 					FontFamily="Arimo"
 					FontAttributes="Bold"
 					HorizontalOptions="Center"/>
 
+			<Entry x:Name="email"
+				   WidthRequest="400"
+				   FontFamily="Arimo"
+				   TextColor="White"
+				   BackgroundColor="LightGrey"
+				   PlaceholderColor="Black"
+				   Placeholder="email or username"/>
+
 			<Label
+					x:Name="EMail"	
 					TextColor="Black"
-					Text="{Binding Member.EMail}"
 					SemanticProperties.HeadingLevel="Level1"
 					FontSize="48"
 					FontFamily="Arimo"
@@ -43,15 +50,6 @@
 		<StackLayout Padding="0,90,0,0" Spacing="10">
 			<Label
 					Text=""
-					SemanticProperties.HeadingLevel="Level5"
-					FontSize="17"
-					FontFamily="Arimo"
-					TextColor="Black"
-					FontAttributes="Bold"
-					HorizontalOptions="Center" />
-
-			<Label
-					Text="track it. burn it."
 					SemanticProperties.HeadingLevel="Level5"
 					FontSize="17"
 					FontFamily="Arimo"

@@ -13,9 +13,8 @@ namespace TrackIt
     {
         public static MauiAppBuilder AddRegisterServices(this MauiAppBuilder builder)
         {
-            builder.Services.AddSingleton<IMemberService, MemberService>();
-            builder.Services.AddSingleton<ProfileViewModel>();
             builder.Services.AddSingleton<ProfilePage>();
+            builder.Services.AddSingleton<TrackIt.Views.Health.LogsPage>();
 
             return builder;
         }

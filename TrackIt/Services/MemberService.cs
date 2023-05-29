@@ -9,28 +9,38 @@ using TrackIt.Model;
 
 namespace TrackIt.Services
 {
-    public class MemberService : IMemberService
-    {
-        public async Task<Member> GetMember()
-        {
-            var id = await SecureStorage.Default.GetAsync("memberId");
+	public static class MemberService {
+		
+		public static Member GetMember()
+		{
+			var id = SecureStorage.Default.GetAsync("memberId");
 
-            var client = new HttpClient();
-            string url = "https://localhost:7004/api/Member/GetMember/" + id;
+			var client = new HttpClient();
+			string url = "https://localhost:7004/api/Member/GetMember/" + id.Result;
 
-            client.BaseAddress = new Uri(url);
-            HttpResponseMessage responseMessage = await client.GetAsync(url);
+			client.BaseAddress = new Uri(url);
+			HttpResponseMessage responseMessage = client.GetAsync(url).Result;
 
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                var member = JsonConvert.DeserializeObject<Member>(await responseMessage.Content.ReadAsStringAsync());
-
-                return member;
-            }
-            else
-            {
-                return null;
-            }
-        }
-    }
+			if (responseMessage != null)
+			{
+				if (responseMessage.IsSuccessStatusCode)
+				{
+					var member = JsonConvert.DeserializeObject<Member>(responseMessage.Content.ReadAsStringAsync().Result);
+					
+					client.Dispose();
+					return member;
+				}
+				else
+				{
+					client.Dispose();
+					return null;
+				}
+			}
+			else
+			{
+				client.Dispose();
+				return null;
+			}
+		}
+	}
 }
